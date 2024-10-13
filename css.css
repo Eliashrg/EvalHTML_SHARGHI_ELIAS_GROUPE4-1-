@@ -1,0 +1,189 @@
+    header { /*définit le style dans le header*/
+        background-color: #101010;
+        padding: 10px 15px;
+        border-radius: 5px
+    }
+
+body { /*définit le style de base dans le body donc la police, l'image de fond, la couleur, la taille*/
+    font-family: 'Phatone', sans-serif;
+    background-image: url(skullblack.png);
+    background-position: center;
+    color: rgb(179, 27, 27); 
+    font-size: small;
+}
+.d-flex { /*rend les éléments flexibles*/
+    display: flex;
+}
+
+.justify-content-between { /*Les éléments sont placés à l'opposés avec un espace égal entre chaque*/
+    justify-content: space-between;
+}
+
+.justify-content-center { /*Centre les éléments horizontalement sur la page*/
+    justify-content: center;
+}
+
+.align-items-center { /*Centre les éléments verticalement sur la page*/
+    align-items: center;
+}
+
+.text-align-center { /*centre le texte horizontalement sur la page*/
+    text-align: center;
+}
+
+.border { /*fais une bordure autour de l'élément*/
+    border: 2px solid black;
+}
+
+.logo { /*définit la taille du logo*/
+    height: 80px;
+    width: auto;
+    border-radius: 5px 
+}
+
+ul { /*Enlève le style d'une liste (les petits points) et définit la taille  du texte des listes*/
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    font-size: small;
+}
+
+ul li { /*ajoute un espace à gauche et élargi le rectangle */
+    margin-left: 20px; 
+    padding: 5px 10px;
+}
+
+ul li:hover {  /*lorsque la souris est sur la liste, le le curseur change*/
+    cursor: pointer;
+}
+
+.image-jeu { /*Permet de régler la taille de l'image, les bordures, son espacement*/
+    margin: 75px;
+    height: 300px;
+    width: auto;
+    margin-bottom: 0;
+    border-radius: 5px
+}
+
+.image-container { /*permet de centrer le texte sous les images*/
+    text-align: center; 
+    font-size: 20px; 
+}
+
+a { /*Eneleve le soulignement et la couleur des liens hypertexte*/
+    text-decoration: none;
+    color: inherit;
+}
+
+p{ /*Définit la taille du texte au sein des balises p*/
+    font-size: 10px;
+}
+
+.pitch-rectangle { /*Définit les caractéristiques du rectangle situé derrière le pitch du jeu*/
+    background-color: #101010; 
+    border-radius: 10px
+}
+
+.footer-background { /*définit la couleur et la taille du footer*/
+    background-color: #101010;
+    border-radius: 10px;
+    width: 100%;
+}
+
+button { /* Toutes les balises boutons auront les caractéristiques suivantes : */
+    background-color: rgb(133, 19, 19);
+    color: white; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+        font-size: 15px
+    }
+
+.gifgauche { /* Permet d'ajuster la taille du gif, et éviter qu'il n'affecte le formulaire du centre */
+    height: 250px;
+    width: auto;
+    float: right;
+    margin-right: 0px;
+}
+
+.gifdroite { /* Permet d'ajuster la taille du gif, et éviter qu'il n'affecte le formulaire du centre */
+    height: 250px;
+    width: auto;
+    float: left;
+    margin-left: 0px;
+}
+
+form { /* Définit la taille de la police au sein du formulaire */
+    font-size: small;
+}
+
+
+@media (max-width: 1200px) { /* Responsive pour les petits Ordinateurs portables et tablette en mode paysage*/
+    .d-flex {
+        flex-wrap: wrap; /* fais en sorte que les éléments puissent se répartir sur plusieurs lignes */
+    }
+
+    .image-jeu {
+        height: 200px; /* Réduit la taille des images */
+        margin: 30px; /* Change l'espacement des images */
+    }
+}
+
+@media (max-width: 768px) { /* Responsive pour les Tablettes */
+    header, footer {
+        flex-direction: column; /* Rend la direction verticale */
+        align-items: center; /* les éléments se centrent à l'horizontal */
+    }
+
+    ul {
+        flex-direction: column; /* La liste se met en colonne au lieu de côte à côte */
+        padding: 0; 
+    }
+
+    ul li {
+        margin: 5px 0; /* réduit l'espace */
+    }
+
+    .pitch-rectangle { /* ajuste le padding et la taille de la police du pitch du jeu */
+        padding: 15px; 
+        font-size: medium; 
+    }
+
+    button {
+        padding: 8px 15px; /* réduit la taille de l'espace pour éviter que la zone d'intéraction soit trop large */
+    }
+    
+}
+
+@media (max-width: 480px) { /* Responsive pour les smartphones */
+    p {
+        font-size: 16px; /* ajuste la taile de la police */
+    }
+
+    .logo {
+        height: 60px; /* ajuste la taille du logo en haut à gauche */
+    }
+
+    .image-jeu {
+        height: 150px; /* réduit la taille des images jeux vidéos */
+    }
+    @media (max-width: 480px) { /* Responsive pour les smartphones */
+        p {
+            font-size: 16px; /* ajuste la taile de la police */
+        }
+    
+        .logo {
+            height: 60px; /* ajuste la taille du logo en haut à gauche */
+        }
+    
+        .image-jeu {
+            height: 150px; /* réduit la taille des images jeux vidéos */
+        }
+        .gifgauche, 
+        .gifdroite {
+            display: none; /* Cache les images gifs sur la page 2*/
+        }
+    }
+}
